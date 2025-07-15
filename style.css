@@ -1,0 +1,151 @@
+/* Background */
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #2b1055, #7597de);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+}
+
+/* Confetti */
+#confetti {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* Cake Container */
+.cake-container {
+  text-align: center;
+  position: relative;
+}
+
+/* Cake */
+.cake {
+  position: relative;
+  width: 300px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+/* Layers */
+.layer {
+  height: 60px;
+  border-radius: 8px;
+  margin: 5px 0;
+  animation: popUp 1s ease-out forwards;
+  opacity: 0;
+}
+
+.layer-bottom {
+  background: #6c4b41;
+  animation-delay: 0.5s;
+}
+
+.layer-middle {
+  background: #d7c7af;
+  animation-delay: 1s;
+}
+
+.layer-top {
+  background: #6c4b41;
+  animation-delay: 1.5s;
+}
+
+/* Candle */
+.candle {
+  width: 10px;
+  height: 40px;
+  background: #90caf9;
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 3px;
+  animation: popUp 0.5s ease-out 2s forwards;
+  opacity: 0;
+}
+
+/* Flame */
+.flame {
+  width: 15px;
+  height: 20px;
+  background: radial-gradient(circle, #ffeb3b 40%, #ff5722 80%);
+  border-radius: 50%;
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%) scale(1);
+  animation: flicker 0.3s infinite alternate;
+  box-shadow: 0 0 15px 5px rgba(255, 193, 7, 0.5);
+}
+
+/* Wish */
+.wish {
+  margin-top: 20px;
+  font-size: 32px;
+  color: #ffeb3b;
+  animation: fadeIn 2s ease 3s forwards;
+  opacity: 0;
+  text-shadow: 0 0 10px #ffeb3b;
+}
+
+/* Instructions */
+.instruction {
+  font-size: 20px;
+  color: #ffeb3b;
+  margin-top: 10px;
+  animation: fadeIn 2s ease 4s forwards;
+  opacity: 0;
+  text-shadow: 0 0 8px #ffeb3b;
+}
+
+.instruction.small {
+  font-size: 16px;
+  color: #ffe082;
+  animation-delay: 4.5s;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: rgba(43, 16, 85, 0.8); /* Semi-transparent dark purple */
+  color: #ffe082;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+  font-family: 'Segoe UI', sans-serif;
+  z-index: 1000;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Animations */
+@keyframes popUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes flicker {
+  from {
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-50%) scale(1.2);
+    opacity: 0.7;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday!</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="confetti"></canvas>
+
+  <div class="cake-container">
+    <div class="cake" onclick="blowCandle()">
+      <div class="candle">
+        <div class="flame" id="flame"></div>
+      </div>
+      <div class="layer layer-bottom"></div>
+      <div class="layer layer-middle"></div>
+      <div class="layer layer-top"></div>
+    </div>
+    <h1 class="wish">🎉 Happy Birthday  🎉</h1>
+    <h1 class="wish">PRAMUGDHA!</h1>
+    <p class="instruction small">🎵 Click anywhere to play the birthday song</p>
+    <p class="instruction">🎂 Click the cake to blow the candle</p>
+    
+  </div>
+<div class="footer">Made with ❤️ by Your Friend</div>
+
+  <audio id="bgMusic" src="happy-birthday.mp3" preload="auto"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
